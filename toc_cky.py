@@ -12,7 +12,8 @@ a = ['#','a','b','a','a','b']
 #a =  ['#','b','a','b','b','b']
 #a = ['#','a','a','a','a']
 
- = open('string_cyk.txt','r');
+input_file= open('string_cyk.txt','r');
+input_string = input_file.read()
 a = input_string.split()
 #n is the number of characters
 n = len(a)
