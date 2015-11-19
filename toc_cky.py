@@ -1,22 +1,12 @@
-#############Author: Kiran Kumar Lekkala#############
-
-
-##input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
-
-
+##take the gramer as input from input_cyk.txt
+input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
 import numpy as np
 
 #a is an array consisting of non-terminal symbols
-a = ['#','a','b','a','a','b']
-#a = ['#','b','a','a','b','a']
-#a =  ['#','b','a','b','b','b']
-#a = ['#','a','a','a','a']
-
 input_file= open('string_cyk.txt','r');
 input_string = input_file.read()
 a = input_string.split()
-#n is the number of characters
-n = len(a)
+
 
 input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
 
