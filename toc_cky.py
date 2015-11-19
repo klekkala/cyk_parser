@@ -1,6 +1,9 @@
+import numpy as np
+from input_process import input_process
+
+
 ##take the gramer as input from input_cyk.txt
 input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
-import numpy as np
 
 #a is an array consisting of non-terminal symbols
 input_file= open('string_cyk.txt','r');
@@ -8,11 +11,9 @@ input_string = input_file.read()
 a = input_string.split()
 
 
-
-#r is the number of non-terminal symbols
-r = len(Q)
 #P is a 3D dimetional array. Initialized to zeroes.
 P=np.zeros((n,n,r))
+
 
 #function to find the index of the non-terminal symbol
 def find_ind(l,m):
