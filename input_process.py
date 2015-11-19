@@ -1,4 +1,4 @@
-####Author: Kiran Kumar Lekkala#####
+######################Author: Kiran Kumar Lekkala#######################
 
 def input_process():
   input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]

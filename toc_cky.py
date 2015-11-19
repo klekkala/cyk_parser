@@ -1,6 +1,6 @@
 import numpy as np
 from input_process import input_process
-
+from give_left import left_most
 
 ##take the gramer as input from input_cyk.txt
 input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
@@ -63,3 +63,6 @@ for i in range(1,len(S)):
 		print "yes"
 	else:
 		print "no"
+
+###function to print left most derivation
+left = left_most(P);
