@@ -33,16 +33,16 @@ def find_ind(l,m):
 			#print i,j
 			if Q[i][j][0]==l and Q[i][j][1]==m:
 				Z.append(i)
-	
+
 	return Z
-	
+
 
 
 ##for loop for setting the terminals
 for i in range(1,len(a)):
 	for j in range(1,len(Q)):
 		for k in range(1,len(Q[j])):
-		
+
 			if Q[j][k]==a[i]:
 				P[1,i,j]=j
 
@@ -59,8 +59,8 @@ for i in range(2,n):
 						Z = find_ind(l,m)
 						for a in range(0,len(Z)):
 							P[i,j,Z[a]] = Z[0]
-						
-					
+
+
 
 print P
 for i in range(1,len(S)):
@@ -68,7 +68,7 @@ for i in range(1,len(S)):
 		print "yes"
 	else:
 		print "no"
-		
+
 
 
 ###function to print left most derivation
