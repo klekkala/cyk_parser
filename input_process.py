@@ -1,7 +1,5 @@
 ######################Author: Kiran Kumar Lekkala#######################
-
-
-
+#####Description: processing the input from the grammer file############
 def input_process():
     input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
 
@@ -37,5 +35,4 @@ def input_process():
 
     return Q
     
-
 

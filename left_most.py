@@ -1,5 +1,27 @@
 
-def get_left(P,Q,n,r):
+def get_left(P,Q,n,r,cur,F,char):
+	
+	F.append(char)
+	for i in range(n-1,0):
+		for j in range(1,n):
+			for k in range(1,r):
+				if P[i,j,k]!=0:
+					get_left(P,Q,n,r,cur-1,k) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     F.append(1)
     for i in range(2,n):

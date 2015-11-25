@@ -5,25 +5,34 @@ from input_process import input_process
 ##take the gramer as input from input_cyk.txt
 input_list = [i.strip().split() for i in open("input_cyk.txt").readlines()]
 
-#a is an array consisting of non-terminal symbols
-input_file= open('string_cyk.txt','r');
+
+####Processing the sentance####
+input_file= open('string_cyk.txt','r')
 input_string = input_file.read()
 a = input_string.split()
 a.insert(0,'#')
-print a
 n = len(a)
 
+####Processing the grammer#####
 Q = input_process()
-print Q
 r = len(Q)
 
-########
-S = ['#',1]
+####Processing the start-set####
+S = []
+S.append('#')
+input_file = open('start_set.txt','r')
+input_string = input_file.read()
+x = input_string.split()
+
+for j in range(0,len(x)):
+	for i in range(1,len(Q)):
+		if x[j] == Q[i][0]:
+			S.append(i)
+
 
 #P is a 3D dimetional array. Initialized to zeroes.
 P=np.zeros((n,n,r))
 
-#Taking input as the grammer
 
 #function to find the index of the non-terminal symbol
 def find_ind(l,m):
@@ -58,20 +67,19 @@ for i in range(2,n):
 
 						Z = find_ind(l,m)
 						for a in range(0,len(Z)):
-							P[i,j,Z[a]] = Z[0]
+							P[i,j,Z[a]] = 1
 
 
 
-print P
+#print P
 for i in range(1,len(S)):
 	if P[n-1][1][S[i]] != 0:
-		print "yes"
+		print "Yes"
+		break
+
 	else:
-		print "no"
+		print "No"
 
 
 
 ###function to print left most derivation
-left = left_most(P,Q,n,r);
-for i in range(0,len(left)):
-	print left[i]
